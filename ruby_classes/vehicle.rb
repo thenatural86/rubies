@@ -18,6 +18,10 @@ class Vehicle
     puts "This program has created #{@@number_of_objects_created} vehicles"
   end
 
+  def self.age
+    "Your #{self.model} is #{years_old} years old."
+  end
+
   def initialize
     @year = year
     @color = color
@@ -66,6 +70,11 @@ class MyCar < Vehicle
   end
 end
 
+
+
+
+
+
 puts Vehicle.ancestors
 puts MyCar.ancestors
 puts MyTruck.ancestors
@@ -83,3 +92,10 @@ lumina.current_speed
 lumina.shut_down
 lumina.current_speed
 lumina.spray_paint('red')
+
+
+private
+
+def years_old
+  Time.now.year - self.year
+end
