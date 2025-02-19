@@ -1,3 +1,10 @@
+module Towable
+  def can_tow?(pounds)
+    pounds < 200
+  end
+end
+
+
 class Vehicle
   @@number_of_vehicles = 0
 
@@ -19,5 +26,6 @@ class MyCar < Vehicle
 end
 
 class MyTruck < Vehicle
+  include Towable
   NUMBER_OF_DOORS = 2
 end
