@@ -10,6 +10,14 @@ class MyCar
     @current_speed = 0
   end
 
+  def self.gas_mileage(gallons, miles)
+    puts "#{miles / gallons} miles per gallon of gas"
+  end
+
+  def to_s
+    "My car is a #{color}, #{year}, #{@model}!"
+  end
+
   def speed_up(number)
     @current_speed += number
     puts "You push the gas and accelerate #{number} mph."

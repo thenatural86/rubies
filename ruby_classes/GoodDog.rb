@@ -33,5 +33,4 @@ class GoodDog
   def what_is_self
     self
   end
-
 end
