@@ -11,6 +11,20 @@ class Person
   attr_reader :age
 end
 
+class Student
+
+  def initialize(name, grade)
+    @name = name
+    @grade = grade
+  end
+
+  protected
+  attr_reader :grade
+  def grade
+    @grade
+  end
+end
+
 
 malory = Person.new(64)
 sterling = Person.new(42)
